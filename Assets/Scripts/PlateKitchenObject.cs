@@ -1,10 +1,17 @@
 using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
+using System;
 
 public class PlateKitchenObject : KitchenObject
 {
+    public event EventHandler<OnIngredientAddedEventArgs> OnIngredientAdded;
 
+    public class OnIngredientAddedEventArgs : EventArgs
+    {
+        public KitchenObjectSO kitchenObjectSO;
+    }
+    
     [SerializeField] private List<KitchenObjectSO> validKitchenObjectSOList;
     
     private List<KitchenObjectSO> kitchenObjectSOList;
@@ -21,11 +28,27 @@ public class PlateKitchenObject : KitchenObject
             // Not a valid ingredient
             return false;
         }
+
+        if (kitchenObjectSOList.Contains(kitchenObjectSO))
+        {
+            // Already has this type
+            return false;
+        }
         else
         {
             kitchenObjectSOList.Add(kitchenObjectSO);
+            
+            OnIngredientAdded?.Invoke(this, new OnIngredientAddedEventArgs
+            {
+                kitchenObjectSO = kitchenObjectSO
+            });
+            
             return true;
         }
-        
+    }
+
+    public List<KitchenObjectSO> GetKitchenObjectSOList()
+    {
+        return kitchenObjectSOList;
     }
 }

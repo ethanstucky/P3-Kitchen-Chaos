@@ -7,7 +7,8 @@ public class Player : MonoBehaviour, IKitchenObjectParent
 {
     
     public static Player Instance { get; private set; }
-    
+
+    public event EventHandler OnPickedSomething;
     public event EventHandler<OnSelectedCounterChangedEventArgs> OnSelectedCounterChanged;
 
     public class OnSelectedCounterChangedEventArgs : EventArgs
@@ -41,6 +42,8 @@ public class Player : MonoBehaviour, IKitchenObjectParent
 
     private void GameInput_InteractAlternateAction(object sender, EventArgs e)
     {
+        if (!KitchenGameManager.Instance.IsGamePlaying()) return;
+        
         if (selectedCounter != null)
         {
             selectedCounter.InteractAlternate(this);
@@ -49,6 +52,8 @@ public class Player : MonoBehaviour, IKitchenObjectParent
 
     void GameInputInteractAction(object sender, EventArgs e)
     {
+        if (!KitchenGameManager.Instance.IsGamePlaying()) return;
+        
         if (selectedCounter != null)
         {
             selectedCounter.Interact(this);
@@ -172,6 +177,11 @@ private void HandleMovement()
     public void SetKitchenObject(KitchenObject kitchenObject)
     {
         this.kitchenObject = kitchenObject;
+
+        if (kitchenObject != null)
+        {
+            OnPickedSomething?.Invoke(this, EventArgs.Empty);
+        }
     }
 
     public KitchenObject GetKitchenObject()
