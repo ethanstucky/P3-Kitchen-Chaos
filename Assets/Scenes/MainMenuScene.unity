@@ -188,13 +188,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 180495330}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.094082, y: -0.15460785, z: -0.014791729, w: 0.98337495}
-  m_LocalPosition: {x: 1.27, y: 0.69, z: -3.38}
+  m_LocalRotation: {x: -0.09446473, y: -0.12656893, z: -0.012109171, w: 0.9873753}
+  m_LocalPosition: {x: 0.82, y: 0.69, z: -3.27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -10.93, y: -17.87, z: 0}
+  m_LocalEulerAnglesHint: {x: -10.93, y: -14.61, z: 0}
 --- !u!114 &180495333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -771,13 +771,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 816454318}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.094082, y: -0.15460785, z: -0.014791729, w: 0.98337495}
-  m_LocalPosition: {x: 1.27, y: 0.69, z: -3.38}
+  m_LocalRotation: {x: -0.094464734, y: -0.12656894, z: -0.012109172, w: 0.9873754}
+  m_LocalPosition: {x: 0.82, y: 0.69, z: -3.27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -9.934, y: -17.853, z: -0.095}
 --- !u!114 &816454322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1081,13 +1081,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1252626493}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.18309256, y: -0.53965074, z: 0.33184463, w: 0.75175345}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 39.304, y: -63.065, z: 22.918}
 --- !u!114 &1252626496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1851,6 +1851,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 816454321}
+  - {fileID: 180495332}
   - {fileID: 1252626495}
   - {fileID: 2136338112}
   - {fileID: 579944087}
@@ -1860,5 +1861,4 @@ SceneRoots:
   - {fileID: 577405784}
   - {fileID: 653505516}
   - {fileID: 1331151194}
-  - {fileID: 180495332}
   - {fileID: 1816246612}
